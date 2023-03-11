@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+:root {
+    --azul: #0075ff;
+    --cinza: #aaa;
+    --branco: #fff;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap; /*ajuda o item pular para a linha debaixo*/
+}
+
+#container1 {
+    margin-top: 2rem;
+    margin-left: 3rem;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+    /*border: 1px solid black;*/
+}
+
+#marca {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    /*    border: 1px solid red; */
+}
+
+#marca img {
+    height: 50px;
+    margin-right: 0.6rem;
+}
+
+#exclusividade  {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--azul);
+}
+
+#conteudo1 h2 {
+    font-size: 2.4rem;
+    max-width: 500px;
+    margin-bottom: 1rem;
+        /*border: 1px solid aqua;*/
+}
+
+#data {
+    text-transform: uppercase;
+    color: var(--cinza);
+    margin-bottom: 1rem;
+}
+
+#descricao {
+    max-width: 500px; /*problema*/
+    margin-bottom: 1rem;
+    line-height: 1.4rem;
+}
+
+#conteudo1 h4 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+#preleitores-area {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 1rem; 
+}
+
+.informacoes-card {
+    border: 2px solid #ccc;
+    padding: 1rem;
+    width: 190px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.informacoes-card img {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.nome {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.cargo {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--cinza);
+}
+
+#container2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem; 
+    background-image: url(img/pattern.png);
+    background-size: cover;
+    color: var(--branco);
+    border-radius: 3px;
+}
+
+#formulario {
+    display: flex;    
+    border: 2px solid var(--branco);
+    margin: 2rem;
+    padding: 2rem;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 3px;
+}
+
+#formulario h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#formulario p {
+    margin-bottom: 3rem;
+}
+
+#registros {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#cadastro {
+    display: flex;
+    gap: 0.5rem;
+}
+
+#registros input {
+    padding: 0.8rem 0.6rem;
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 0.5rem;
+}
+
+#email {
+    min-width: 100%;
+}
+
+#registros input[type="submit"] {
+    background-color: transparent;
+    color: var(--branco);
+    border: 2px solid var(--branco);
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#registros input[type="submit"]:hover {
+    background-color: var(--branco);
+    color: var(--azul);
+}
+
+#beneficios {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+#beneficios h4 {
+    font-size: 1.4rem;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+#beneficios ul {
+    list-style-position: inside;
+    margin-bottom: 1rem;
+}
+
+#beneficios li {
+    margin-bottom: 0.5rem;
+}
+
+
+/* Responsivo */
+@media (max-width: 450px) {
+    body {
+      flex-direction: column;
+    }
+  
+    #container1 {
+      padding: 2rem;
+      padding-bottom: 0;
+    }
+  
+    #container1 h2 {
+      font-size: 3rem;
+    }
+  
+    #exclusividade,
+    #data {
+      font-size: 1.4rem;
+    }
+  
+    #descricao {
+      font-size: 1.6rem;
+      line-height: 2.2rem;
+    }
+  
+    #container1 h4 {
+      font-size: 2rem;
+    }
+  
+    #preleitores-area {
+      flex-direction: column;
+    }
+  
+    .informacoes-card {
+      width: 100%;
+      padding: 2rem;
+    }
+  
+    .informacoes-card img {
+      width: 180px;
+    }
+  
+    .informacoes-card .nome {
+      font-size: 1.6rem;
+    }
+  
+    .informacoes-card .cargo {
+      font-size: 1.4rem;
+    }
+  
+    #formulario {
+      margin: 2rem;
+      padding: 2rem;
+    }
+  
+    #registros,
+    #cadastro {
+      gap: 1rem;
+    }
+  }
